@@ -70,9 +70,30 @@ Code reviews ensure code quality, knowledge sharing, and maintain consistency ac
 - Reference reviewer comments in commit messages when applicable
 - Re-request review after addressing feedback
 
+## Review Process
+
+### Django Backend Repository
+1. **Prerequisites**: All CI/CD checks must pass before requesting review
+   - Unit tests
+   - Performance analysis
+   - Linting
+   - Security tests
+2. Self-review your code before requesting reviews
+3. Request reviews from at least 2 senior developers
+4. Address all feedback constructively
+5. Obtain final approval from tech lead
+
+### Next.js Frontend Repository
+1. Self-review your code before requesting reviews
+2. Ensure linting passes before requesting review
+3. Request reviews from at least 1 senior developer
+4. Address all feedback constructively
+5. Obtain approval before merging
+
 ## Review Timeline
 - **Initial review**: Within 24 hours of request
 - **Follow-up reviews**: Within 12 hours
+- **Response to feedback**: Within 24 hours
 - **Urgent fixes**: Within 2 hours (mark as urgent)
 
 ## Review Tools

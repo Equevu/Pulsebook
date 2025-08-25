@@ -8,62 +8,119 @@ We follow a 2-week sprint cycle using Agile/Scrum methodology. This document out
 ### Week 1
 | Day | Activity | Time | Duration |
 |-----|----------|------|----------|
-| Monday | Sprint Planning | 10:00 AM | 2 hours |
-| Monday | Sprint Kickoff | 2:00 PM | 30 min |
+| Monday | Weekly Check-in | 8:30 AM | 30 min |
+| Monday | Sprint Kickoff | 10:00 AM | 30 min |
 | Wednesday | Mid-sprint Check-in | 11:00 AM | 30 min |
 | Friday | Technical Review | 3:00 PM | 1 hour |
-| Daily | Stand-up | 10:00 AM | 15 min |
+| Friday | Weekly Checkout | 3:30 PM | 30 min |
+| Daily | Stand-up | 9:00 AM | 15 min |
 
 ### Week 2
 | Day | Activity | Time | Duration |
 |-----|----------|------|----------|
+| Monday | Weekly Check-in | 8:30 AM | 30 min |
 | Monday | Sprint Progress Review | 2:00 PM | 30 min |
 | Wednesday | Pre-demo Preparation | 3:00 PM | 1 hour |
 | Thursday | Sprint Review/Demo | 2:00 PM | 1 hour |
 | Friday | Sprint Retrospective | 10:00 AM | 1 hour |
-| Friday | Backlog Grooming | 2:00 PM | 1.5 hours |
-| Daily | Stand-up | 10:00 AM | 15 min |
+| Friday | Sprint Planning & Backlog Grooming | 1:00 PM | 3 hours |
+| Friday | Weekly Checkout | 3:30 PM | 30 min |
+| Daily | Stand-up | 9:00 AM | 15 min |
 
 ## Sprint Ceremonies
 
-### 1. Sprint Planning
+### 1. Sprint Planning & Backlog Grooming (Combined Session)
 
 #### Purpose
-Define sprint goals and commit to deliverables for the upcoming sprint.
+Refine backlog items, define sprint goals, and commit to deliverables for the upcoming sprint. This combined session ensures the team has a well-groomed backlog before planning the next sprint.
+
+#### Timing
+Every second Friday, 1:00 PM - 4:00 PM (after Sprint Retrospective)
 
 #### Participants
-- Product Owner
-- Scrum Master
+- Business Analyst
 - Development Team
-- Stakeholders (optional)
+- QA Team
+- CEO (optional)
+- Operations Manager (optional)
 
 #### Agenda
-1. **Sprint Goal Setting** (30 min)
+
+##### Part 1: Backlog Grooming (90 min)
+1. **Review Upcoming Stories** (30 min)
+   - Break down epics into stories
+   - Add/update acceptance criteria
+   - QA reviews test scenarios
+
+2. **Story Estimation** (30 min)
+   - Estimate new stories
+   - Re-estimate changed stories
+   - Include QA effort in estimates
+
+3. **Prioritization** (30 min)
+   - Reorder backlog based on business value
+   - Identify dependencies
+   - Remove obsolete stories
+
+##### Part 2: Sprint Planning (90 min)
+1. **Sprint Goal Setting** (20 min)
    - Review product roadmap
    - Define sprint objectives
    - Align with business priorities
 
-2. **Backlog Review** (45 min)
-   - Review refined user stories
-   - Clarify acceptance criteria
-   - Identify dependencies
-
-3. **Capacity Planning** (15 min)
+2. **Capacity Planning** (10 min)
    - Account for holidays/PTO
    - Consider meetings/ceremonies
    - Factor in support duties
 
-4. **Story Selection** (30 min)
-   - Team pulls stories into sprint
-   - Estimate story points
+3. **Story Selection** (40 min)
+   - Team pulls stories from groomed backlog
+   - Verify story readiness
    - Commit to sprint backlog
 
+4. **Task Breakdown** (20 min)
+   - Break stories into tasks
+   - Identify technical approach
+   - QA plans test execution
+
 #### Output
+- Groomed backlog for future sprints
 - Sprint goal documented
 - Sprint backlog created
 - Team commitment confirmed
+- Test approach defined
 
-### 2. Daily Stand-up
+### 2. Weekly Check-in
+
+#### Purpose
+Start each week aligned on priorities and upcoming tasks.
+
+#### Timing
+Every Monday at 8:30 AM (30 minutes)
+
+#### Agenda
+- Discuss upcoming week's priorities
+- Review sprint goals and commitments
+- Address any upcoming blockers or concerns
+- Coordinate team schedule for the week
+- Plan key deliverables and milestones
+
+### 3. Weekly Checkout
+
+#### Purpose
+Review the previous week's accomplishments and learnings.
+
+#### Timing
+Every Friday at 3:30 PM (30 minutes)
+
+#### Agenda
+- Review previous week's accomplishments
+- Discuss what went well and what could be improved
+- Identify any carryover items
+- Quick status on completed tasks
+- Celebrate wins and acknowledge challenges
+
+### 4. Daily Stand-up
 
 #### Format
 Each team member answers:
@@ -82,9 +139,9 @@ Each team member answers:
 - Camera on for engagement
 - Use round-robin order
 - Share screen for board review
-- Post updates in Slack if unable to attend
+- Post updates in Teams if unable to attend
 
-### 3. Sprint Review/Demo
+### 5. Sprint Review/Demo
 
 #### Purpose
 Demonstrate completed work and gather feedback.
@@ -98,11 +155,12 @@ Demonstrate completed work and gather feedback.
 2. **Demonstrations** (40 min)
    - Live demos of completed features
    - Show working software only
-   - Focus on user value
+   - Focus on business value
+   - BA presents context for each feature
 
 3. **Feedback & Discussion** (15 min)
-   - Stakeholder questions
-   - Feedback collection
+   - CEO and Operations Manager feedback
+   - Questions and clarifications
    - Next steps identification
 
 #### Demo Best Practices
@@ -112,7 +170,7 @@ Demonstrate completed work and gather feedback.
 - Assign demo presenters during planning
 - Practice demos beforehand
 
-### 4. Sprint Retrospective
+### 6. Sprint Retrospective
 
 #### Purpose
 Continuous improvement through team reflection.
@@ -143,23 +201,37 @@ Continuous improvement through team reflection.
 - Review previous sprint's actions
 - Track in sprint backlog
 
-### 5. Backlog Grooming/Refinement
+### 7. Sprint Kickoff
+
+#### Purpose
+Align the team on sprint goals and kick off the new sprint with energy and clarity.
+
+#### Timing
+Monday morning of Week 1 (10:00 AM, 30 minutes)
 
 #### Activities
-- Break down epics into stories
-- Add/update acceptance criteria
-- Estimate story points
-- Identify dependencies
-- Prioritize backlog items
-- Remove obsolete stories
+- Review sprint goals
+- Confirm sprint backlog
+- Address any questions from Friday's planning
+- Set expectations for the sprint
+- Motivate team for the upcoming sprint
 
-#### Story Readiness Checklist
+#### Participants
+- Business Analyst
+- Development Team
+- QA Team
+- CEO (optional)
+- Operations Manager (optional)
+
+### Story Readiness Checklist
+During the combined Planning & Grooming session, ensure stories meet these criteria:
 - [ ] Clear description
-- [ ] Acceptance criteria defined
+- [ ] Acceptance criteria defined by BA
 - [ ] Story points estimated
 - [ ] Dependencies identified
 - [ ] Technical approach discussed
-- [ ] Test scenarios outlined
+- [ ] Test scenarios outlined by QA
+- [ ] QA effort estimated
 
 ## Story Point Estimation
 
@@ -229,33 +301,35 @@ We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 
 ### Testing Complete
 - [ ] Integration tests passing
-- [ ] Manual testing completed
+- [ ] QA manual testing completed
 - [ ] Edge cases tested
+- [ ] Test cases executed and passed
+- [ ] Bug verification complete
 - [ ] Performance validated
 - [ ] Security scan passed
+- [ ] QA sign-off obtained
 
 ### Ready for Production
 - [ ] Deployed to staging
-- [ ] Product Owner acceptance
+- [ ] BA acceptance of requirements
+- [ ] QA sign-off complete
 - [ ] Release notes prepared
 - [ ] Monitoring configured
 - [ ] Feature flag configured (if applicable)
 
 ## Sprint Roles
 
-### Product Owner
+### Business Analyst (BA)
 - Maintains product backlog
+- Gathers and documents requirements
 - Defines acceptance criteria
-- Prioritizes work
-- Accepts completed stories
-- Communicates with stakeholders
-
-### Scrum Master
-- Facilitates ceremonies
-- Removes blockers
-- Coaches team on Agile
+- Clarifies business logic
+- Bridges gap between stakeholders and development
+- Prioritizes work with CEO and Operations Manager
+- Validates completed stories meet requirements
+- Facilitates sprint ceremonies
 - Tracks sprint metrics
-- Protects team from disruptions
+- Removes blockers when possible
 
 ### Development Team
 - Estimates stories
@@ -263,6 +337,30 @@ We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 - Self-organizes work
 - Delivers increment
 - Participates in ceremonies
+- Raises blockers and dependencies
+
+### QA Team
+- Reviews acceptance criteria
+- Creates test plans and test cases
+- Performs manual and automated testing
+- Reports and tracks bugs
+- Validates stories meet Definition of Done
+- Participates in estimation
+- Provides quality metrics
+
+### Stakeholders
+
+#### CEO
+- Provides strategic direction
+- Approves major features and priorities
+- Reviews sprint demos
+- Makes final decisions on scope changes
+
+#### Operations Manager
+- Provides operational requirements
+- Reviews business process impacts
+- Validates operational feasibility
+- Participates in sprint reviews
 
 ## Sprint Anti-patterns
 
@@ -291,10 +389,10 @@ We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 - **Reports**: Velocity, Burndown, Cumulative flow
 
 ### Communication
-- **Slack Channels**:
-  - #dev-standup
-  - #sprint-planning
-  - #sprint-demos
+- **Teams Channels**:
+  - Dev Standup
+  - Sprint Planning
+  - Sprint Demos
 
 ### Documentation
 - Sprint goal document
@@ -340,12 +438,14 @@ We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 
 ### Mid-Sprint Critical Issues
 1. Assess impact and urgency
-2. Consult Product Owner
-3. Decide: Fix now or next sprint
-4. If fixing now:
+2. BA consults with CEO/Operations Manager if needed
+3. QA team assesses testing impact
+4. Decide: Fix now or next sprint
+5. If fixing now:
    - Identify what to remove
    - Update sprint backlog
-   - Communicate to stakeholders
+   - Communicate to all teams
+   - Adjust QA test plans
 
 ### Sprint Failure Recovery
 1. Stop and assess

@@ -25,18 +25,18 @@ Effective communication is crucial for team success. These guidelines help maint
 
 ## Communication Channels
 
-### Slack Guidelines
+### Teams Guidelines
 
 #### Channel Usage
 | Channel | Purpose | Response Time |
 |---------|---------|---------------|
-| #general | Company-wide announcements | No response expected |
-| #dev-team | Development discussions | 2-4 hours |
-| #urgent | Critical issues | 15 minutes |
-| #random | Non-work discussions | Optional |
-| #help | Technical questions | 1-2 hours |
+| General | Company-wide announcements | No response expected |
+| Dev Team | Development discussions | 2-4 hours |
+| Urgent | Critical issues | 15 minutes |
+| Random | Non-work discussions | Optional |
+| Help | Technical questions | 1-2 hours |
 
-#### Slack Etiquette
+#### Teams Etiquette
 - **Use threads** for detailed discussions
 - **@here** only for time-sensitive team matters
 - **@channel** only for critical urgent issues
@@ -104,6 +104,9 @@ Effective communication is crucial for team success. These guidelines help maint
 | General Questions | 4 hours |
 | FYI/Updates | No response needed |
 | Email | 48 hours |
+
+## Decision Making
+For technical and business decisions, use the [Decision Making Template](./decision-making.md) to document comparisons and rationale.
 
 ## Conflict Resolution
 
@@ -181,11 +184,18 @@ Effective communication is crucial for team success. These guidelines help maint
 
 ## Emergency Communication
 For production issues or emergencies:
-1. Post in #urgent with @here
+1. Post in Urgent channel with @here
 2. Include: What's broken, Impact, What you've tried
 3. Page on-call if no response in 15 minutes
 4. Update thread with progress
 5. Post resolution and postmortem link
+
+### Incident Reporting
+- All P1 and P2 incidents require a formal report
+- Use the [Incident Report Template](./incident-report.md)
+- Submit report within 48 hours of resolution
+- Share in Incidents channel
+- Schedule blameless postmortem for P1 incidents
 
 ## Remember
 - Written communication lacks tone - be extra clear

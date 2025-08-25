@@ -13,9 +13,11 @@ Welcome to the Pulsebook documentation. This guide serves as a comprehensive res
 - [Local & Server Environments](./environments.md) - Setup and management of development environments
 - [Code Architecture](./architecture.md) - System design and architectural patterns
 - [DB Restoration & Keys Rotation](./db-restoration.md) - Database backup procedures and security key management
+- [Incident Report Template](./incident-report.md) - Standardized incident documentation and postmortem process
 
 ### Team Culture
 - [Communication Unwritten Rules](./communication.md) - Team communication guidelines and expectations
+- [Decision Making](./decision-making.md) - Templates for documenting technical and business decisions
 
 ---
 
