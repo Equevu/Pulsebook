@@ -1,14 +1,14 @@
 # Pull Request Guidelines 
 
 ## Overview
-Pull requests (PRs) are the primary mechanism for introducing changes to our fintech platform. We maintain separate repositories for our Django backend and Next.js frontend.
+Pull requests (PRs) are the primary mechanism for introducing changes to the Equevu fintech platform. We maintain separate repositories for our Django backend and Next.js frontend.
 
 ## Creating a Pull Request
 
 ### Before You Start
 
 #### For Django Backend Repository
-- Ensure your branch is up to date with the main branch
+- Ensure your branch is up to date with the staging branch
 - Test all changes locally first
 - Document any new environment variables needed
 - Document any database migrations required
@@ -72,7 +72,6 @@ Include screenshots for UI changes
 ## Related Issues
 - Closes #(issue number)
 - Related Backend PR: #(PR number) - if applicable
-- Related Frontend PR: #(PR number) - if applicable
 
 
 ## PR Size Guidelines
@@ -120,7 +119,6 @@ Examples:
 ## PR Best Practices for Fintech
 
 ### Before Submitting PR
-- Test all changes locally in your development environment
 - Ensure all tests pass with minimum 80% coverage (After Fixing)
 - Run security scans and fix any vulnerabilities
 - Verify no sensitive data in commits

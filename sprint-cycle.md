@@ -1,3 +1,8 @@
+---
+title: Sprint Cycle
+layout: default
+---
+
 # Sprint Cycle
 
 ## Overview
@@ -6,26 +11,116 @@ We follow a 2-week sprint cycle using Agile/Scrum methodology. This document out
 ## Sprint Timeline
 
 ### Week 1
-| Day | Activity | Time | Duration |
-|-----|----------|------|----------|
-| Monday | Weekly Check-in | 8:30 AM | 30 min |
-| Monday | Sprint Kickoff | 10:00 AM | 30 min |
-| Wednesday | Mid-sprint Check-in | 11:00 AM | 30 min |
-| Friday | Technical Review | 3:00 PM | 1 hour |
-| Friday | Weekly Checkout | 3:30 PM | 30 min |
-| Daily | Stand-up | 9:00 AM | 15 min |
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Activity</th>
+<th>Time</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monday</td>
+<td>Weekly Check-in</td>
+<td>8:30 AM</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Monday</td>
+<td>Sprint Kickoff</td>
+<td>10:00 AM</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>Mid-sprint Check-in</td>
+<td>11:00 AM</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>Technical Review</td>
+<td>3:00 PM</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>Weekly Checkout</td>
+<td>3:30 PM</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Daily</td>
+<td>Stand-up</td>
+<td>9:00 AM</td>
+<td>15 min</td>
+</tr>
+</tbody>
+</table>
 
 ### Week 2
-| Day | Activity | Time | Duration |
-|-----|----------|------|----------|
-| Monday | Weekly Check-in | 8:30 AM | 30 min |
-| Monday | Sprint Progress Review | 2:00 PM | 30 min |
-| Wednesday | Pre-demo Preparation | 3:00 PM | 1 hour |
-| Thursday | Sprint Review/Demo | 2:00 PM | 1 hour |
-| Friday | Sprint Retrospective | 10:00 AM | 1 hour |
-| Friday | Sprint Planning & Backlog Grooming | 1:00 PM | 3 hours |
-| Friday | Weekly Checkout | 3:30 PM | 30 min |
-| Daily | Stand-up | 9:00 AM | 15 min |
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Activity</th>
+<th>Time</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monday</td>
+<td>Weekly Check-in</td>
+<td>8:30 AM</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Monday</td>
+<td>Sprint Progress Review</td>
+<td>2:00 PM</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>Pre-demo Preparation</td>
+<td>3:00 PM</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Thursday</td>
+<td>Sprint Review/Demo</td>
+<td>2:00 PM</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>Sprint Retrospective</td>
+<td>10:00 AM</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>Sprint Planning & Backlog Grooming</td>
+<td>1:00 PM</td>
+<td>3 hours</td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>Weekly Checkout</td>
+<td>3:30 PM</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>Daily</td>
+<td>Stand-up</td>
+<td>9:00 AM</td>
+<td>15 min</td>
+</tr>
+</tbody>
+</table>
 
 ## Sprint Ceremonies
 
@@ -182,12 +277,6 @@ Continuous improvement through team reflection.
 - **Stop**: What should we stop doing?
 - **Continue**: What's working well?
 
-##### 4 L's
-- **Liked**: What went well?
-- **Learned**: What did we learn?
-- **Lacked**: What was missing?
-- **Longed for**: What do we wish we had?
-
 #### Process
 1. Set the stage (5 min)
 2. Gather data (20 min)
@@ -239,15 +328,52 @@ During the combined Planning & Grooming session, ensure stories meet these crite
 We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 
 ### Reference Stories
-| Points | Reference | Complexity |
-|--------|-----------|------------|
-| 1 | Simple text change | Trivial |
-| 2 | Basic CRUD operation | Simple |
-| 3 | Standard feature | Moderate |
-| 5 | Complex feature | Significant |
-| 8 | Multiple integrations | Complex |
-| 13 | Architectural change | Very Complex |
-| 21 | Epic - needs breakdown | Too Large |
+<table>
+<thead>
+<tr>
+<th>Points</th>
+<th>Reference</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Simple text change</td>
+<td>Trivial</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Basic CRUD operation</td>
+<td>Simple</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Standard feature</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Complex feature</td>
+<td>Significant</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Multiple integrations</td>
+<td>Complex</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Architectural change</td>
+<td>Very Complex</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Epic - needs breakdown</td>
+<td>Too Large</td>
+</tr>
+</tbody>
+</table>
 
 ### Estimation Techniques
 
@@ -365,12 +491,12 @@ We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 ## Sprint Anti-patterns
 
 ### To Avoid
-❌ Changing sprint scope mid-sprint
-❌ Skipping ceremonies
-❌ Not updating tickets daily
-❌ Working on non-sprint items
-❌ Carrying over unfinished stories
-❌ No clear sprint goal
+❌ Changing sprint scope mid-sprint  
+❌ Skipping ceremonies  
+❌ Not updating tickets daily  
+❌ Working on non-sprint items  
+❌ Carrying over unfinished stories  
+❌ No clear sprint goal  
 ❌ Ignoring retrospective actions
 
 ### Warning Signs
@@ -434,36 +560,14 @@ We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 - Innovation time
 - Cross-training opportunities
 
-## Emergency Procedures
-
-### Mid-Sprint Critical Issues
-1. Assess impact and urgency
-2. BA consults with CEO/Operations Manager if needed
-3. QA team assesses testing impact
-4. Decide: Fix now or next sprint
-5. If fixing now:
-   - Identify what to remove
-   - Update sprint backlog
-   - Communicate to all teams
-   - Adjust QA test plans
-
-### Sprint Failure Recovery
-1. Stop and assess
-2. Hold emergency retrospective
-3. Identify root causes
-4. Adjust next sprint capacity
-5. Implement preventive measures
-
 ## Success Indicators
 
 ### Healthy Sprint Signs
-✅ Consistent velocity
-✅ High story completion rate
-✅ Active participation in ceremonies
-✅ Quick blocker resolution
+✅ Consistent velocity  
+✅ High story completion rate  
+✅ Active participation in ceremonies  
+✅ Quick blocker resolution  
 ✅ Positive team morale
-✅ Stakeholder satisfaction
-✅ Continuous improvement
 
 ### Team Satisfaction
 - Regular pulse surveys

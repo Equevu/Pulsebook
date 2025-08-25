@@ -1,3 +1,8 @@
+---
+title: Equevu Pulsebook Documentation
+layout: default
+---
+
 # Equevu Pulsebook Documentation
 
 ![Equevu Logo](https://equevu.com/wp-content/uploads/2024/09/Equevu.svg)
@@ -12,9 +17,7 @@ Welcome to the Equevu Pulsebook documentation. This guide serves as a comprehens
 - [Sprint Cycle](./sprint-cycle.md) - Our sprint planning and execution process
 
 ### Technical Documentation
-- [Local & Server Environments](./environments.md) - Setup and management of development environments
 - [Code Architecture](./architecture.md) - System design and architectural patterns
-- [DB Restoration & Keys Rotation](./db-restoration.md) - Database backup procedures and security key management
 - [Incident Report Template](./incident-report.md) - Standardized incident documentation and postmortem process
 
 ### Team Culture
@@ -27,11 +30,10 @@ Welcome to the Equevu Pulsebook documentation. This guide serves as a comprehens
 
 If you're new to the team, we recommend reading the documentation in this order:
 1. [Communication Unwritten Rules](./communication.md)
-2. [Local & Server Environments](./environments.md)
-3. [Code Architecture](./architecture.md)
-4. [Sprint Cycle](./sprint-cycle.md)
-5. [Pull Requests](./PR.md)
-6. [Code Review](./code-review.md)
+2. [Code Architecture](./architecture.md)
+3. [Sprint Cycle](./sprint-cycle.md)
+4. [Pull Requests](./PR.md)
+5. [Code Review](./code-review.md)
 
 ## Contributing
 

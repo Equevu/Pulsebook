@@ -28,6 +28,7 @@ Effective communication is crucial for team success. These guidelines help maint
 ### Teams Guidelines
 
 #### Channel Usage
+
 | Channel | Purpose | Response Time |
 |---------|---------|---------------|
 | General | Company-wide announcements | No response expected |
@@ -52,27 +53,6 @@ Effective communication is crucial for team success. These guidelines help maint
 ❌ Bad: "review pls"
 ```
 
-### Meeting Etiquette
-
-#### Before the Meeting
-- Send agenda 24 hours in advance
-- Include meeting goals and expected outcomes
-- Share relevant documents beforehand
-- Test tech setup for virtual meetings
-
-#### During the Meeting
-- **Start on time** - Respect everyone's schedule
-- **Stay on mute** when not speaking (virtual)
-- **One conversation** at a time
-- **Take notes** - Rotate note-taking responsibility
-- **Park off-topic items** for later discussion
-
-#### After the Meeting
-- Share notes within 24 hours
-- Clear action items with owners and deadlines
-- Follow up on commitments
-- Cancel if no agenda or quorum
-
 ### Async Communication
 
 #### Best Practices
@@ -88,40 +68,8 @@ Effective communication is crucial for team success. These guidelines help maint
 - Link to documentation in discussions
 - Create FAQs for repeated questions
 
-## Response Time Expectations
-
-### Working Hours
-- Core hours: 10 AM - 4 PM (local timezone)
-- Flexible start/end times communicated to team
-- Response within same business day expected
-- After-hours communication not expected
-
-### By Communication Type
-| Type | Expected Response |
-|------|------------------|
-| Urgent/Blocking | 15-30 minutes |
-| PR Review Request | 24 hours |
-| General Questions | 4 hours |
-| FYI/Updates | No response needed |
-| Email | 48 hours |
-
 ## Decision Making
 For technical and business decisions, use the [Decision Making Template](./decision-making.md) to document comparisons and rationale.
-
-## Conflict Resolution
-
-### Escalation Path
-1. **Direct conversation** - Try to resolve 1:1
-2. **Include mediator** - Bring in neutral party
-3. **Team lead involvement** - Escalate if needed
-4. **HR involvement** - For serious issues
-
-### Healthy Debate Guidelines
-- Focus on ideas, not persons
-- Use data to support arguments
-- Acknowledge valid opposing points
-- Agree to disagree when necessary
-- Document decisions and rationale
 
 ## Remote Communication
 
@@ -131,13 +79,6 @@ For technical and business decisions, use the [Decision Making Template](./decis
 - **Minimize background noise**
 - **Be present** - Avoid multitasking
 - **Record** important sessions
-
-### Time Zone Awareness
-- Include timezone in meeting invites
-- Rotate meeting times for fairness
-- Use async methods when possible
-- Record meetings for those who can't attend
-- Be mindful of others' working hours
 
 ## Feedback Culture
 
@@ -158,21 +99,21 @@ For technical and business decisions, use the [Decision Making Template](./decis
 ## Do's and Don'ts
 
 ### Do's
-✅ Acknowledge messages even if you can't respond fully
-✅ Update tickets/issues with progress
-✅ Celebrate wins and learn from failures
-✅ Ask questions - No question is stupid
-✅ Respect focus time and deep work blocks
-✅ Use inclusive language
+✅ Acknowledge messages even if you can't respond fully  
+✅ Update tickets/issues with progress  
+✅ Celebrate wins and learn from failures  
+✅ Ask questions - No question is stupid  
+✅ Respect focus time and deep work blocks  
+✅ Use inclusive language  
 ✅ Proofread before sending
 
 ### Don'ts
-❌ Ghost on conversations
-❌ Make assumptions about availability
-❌ Use ALL CAPS (seen as shouting)
-❌ Discuss personnel issues publicly
-❌ Forward emails without permission
-❌ Schedule meetings without agenda
+❌ Ghost on conversations  
+❌ Make assumptions about availability  
+❌ Use ALL CAPS (seen as shouting)  
+❌ Discuss personnel issues publicly  
+❌ Forward emails without permission  
+❌ Schedule meetings without agenda  
 ❌ Interrupt or talk over others
 
 ## Cultural Considerations
@@ -182,20 +123,6 @@ For technical and business decisions, use the [Decision Making Template](./decis
 - Be patient with non-native speakers
 - Learn about teammates' backgrounds
 
-## Emergency Communication
-For production issues or emergencies:
-1. Post in Urgent channel with @here
-2. Include: What's broken, Impact, What you've tried
-3. Page on-call if no response in 15 minutes
-4. Update thread with progress
-5. Post resolution and postmortem link
-
-### Incident Reporting
-- All P1 and P2 incidents require a formal report
-- Use the [Incident Report Template](./incident-report.md)
-- Submit report within 48 hours of resolution
-- Share in Incidents channel
-- Schedule blameless postmortem for P1 incidents
 
 ## Remember
 - Written communication lacks tone - be extra clear
