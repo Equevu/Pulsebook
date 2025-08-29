@@ -18,7 +18,7 @@ Welcome to the Equevu Pulsebook documentation. This guide serves as a comprehens
 - [Deployment Strategy](./branching-deployment.md) - Release process and deployment pipeline
 
 ### Coding Standards
-- [General Coding Standards](./coding_standards.md) - Language-agnostic coding conventions and best practices
+- [Python & Django Standards](./coding_standards.md) - Python/Django coding conventions and repository pattern guidelines
 - [Code Architecture](./architecture.md) - System design and architectural patterns
 
 ### Team Culture
