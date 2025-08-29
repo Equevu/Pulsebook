@@ -5,7 +5,6 @@ layout: default
 
 # Equevu Pulsebook Documentation
 
-![Equevu Logo](https://equevu.com/wp-content/uploads/2024/09/Equevu.svg)
 
 Welcome to the Equevu Pulsebook documentation. This guide serves as a comprehensive resource for understanding our development practices, workflows, and technical architecture at Equevu.
 
