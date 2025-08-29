@@ -445,6 +445,18 @@ We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 
 ## Sprint Roles
 
+### Lead Engineer
+- Provides technical leadership and guidance
+- Reviews and approves technical design decisions
+- Ensures code quality and architectural standards
+- Mentors development team members
+- Resolves complex technical blockers
+- Participates in sprint planning and estimation
+- Conducts code reviews for critical components
+- Coordinates with BA on technical feasibility
+- Ensures technical debt is managed appropriately
+- Makes final technical decisions when consensus cannot be reached
+
 ### Business Analyst (BA)
 - Maintains product backlog
 - Gathers and documents requirements

@@ -165,6 +165,7 @@ This template ensures consistent documentation of incidents, facilitates learnin
 **Business Impact:** $15,000 in lost transactions, 40 minutes downtime
 
 ### 3. Incident Timeline
+
 | Time (UTC) | Event / Action | Responsible |
 |------------|---------------|-------------|
 | 10:05 | Payment API alerts - response time > 10s | Monitoring |
