@@ -16,13 +16,16 @@ Welcome to the Equevu Pulsebook documentation. This guide serves as a comprehens
 - [Code Review](./code-review.md) - Best practices for conducting thorough code reviews
 - [Sprint Cycle](./sprint-cycle.md) - Our sprint planning and execution process
 
-### Technical Documentation
+### Coding Standards
+- [General Coding Standards](./coding_standards.md) - Language-agnostic coding conventions and best practices
 - [Code Architecture](./architecture.md) - System design and architectural patterns
-- [Incident Report Template](./incident-report.md) - Standardized incident documentation and postmortem process
 
 ### Team Culture
 - [Communication Unwritten Rules](./communication.md) - Team communication guidelines and expectations
+
+### Technical Documents
 - [Decision Making](./decision-making.md) - Templates for documenting technical and business decisions
+- [Incident Report Template](./incident-report.md) - Standardized incident documentation and postmortem process
 
 ---
 
