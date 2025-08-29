@@ -7,3 +7,4 @@ plugins:
 show_downloads: false
 github:
   is_project_page: false
+url: "https://equevu.github.io/Pulsebook/"
