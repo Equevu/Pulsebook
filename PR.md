@@ -80,25 +80,11 @@ Include screenshots for UI changes
 - Each PR should represent one logical change
 
 ## Branch Naming Convention
-- `feature/JIRA-123-description` - New features
-- `fix/JIRA-456-description` - Bug fixes
-- `hotfix/JIRA-789-description` - Urgent production fixes
-- `security/JIRA-321-description` - Security patches
-- `compliance/JIRA-654-description` - Compliance updates
-- `refactor/JIRA-987-description` - Code improvements
-- `test/JIRA-111-description` - Test additions or fixes
-- `docs/JIRA-222-description` - Documentation updates
-- `chore/JIRA-333-description` - Maintenance tasks
-- `perf/JIRA-444-description` - Performance improvements
-- `release/v1.2.3` - Release branches (builds Docker image)
-
-Examples:
-- `feature/JIRA-123-payment-gateway-integration`
-- `fix/JIRA-456-transaction-validation-error`
-- `hotfix/JIRA-789-critical-payment-bug`
-- `test/JIRA-111-add-api-integration-tests`
-- `chore/JIRA-333-update-dependencies`
-- `release/v2.1.0` - Triggers Docker image build and tagging
+Follow our standardized branch naming convention. See [Branch Naming Convention](./branch-naming.md) for detailed guidelines, including:
+- Branch type prefixes (feature, fix, hotfix, etc.)
+- Ticket number requirements
+- Naming rules and examples
+- Special branches (protected and release branches)
 
 
 ## Merging Strategy

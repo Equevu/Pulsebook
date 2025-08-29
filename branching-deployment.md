@@ -7,21 +7,7 @@ layout: default
 
 ## Branch Naming Convention
 
-All branches must follow our standardized naming convention that includes the ticket number and a descriptive name:
-
-### Branch Types
-
-- **feature/EQ-123-description** - New features or enhancements
-- **fix/EQ-456-description** - Bug fixes for existing functionality
-- **hotfix/EQ-789-description** - Critical fixes that need immediate deployment to production
-- **security/EQ-321-description** - Security-related updates and patches
-- **compliance/EQ-654-description** - Compliance and regulatory requirement implementations
-- **refactor/EQ-987-description** - Code refactoring without changing functionality
-- **test/EQ-111-description** - Test additions or modifications
-- **docs/EQ-222-description** - Documentation updates
-- **chore/EQ-333-description** - Maintenance tasks, dependency updates, configuration changes
-- **perf/EQ-444-description** - Performance improvements and optimizations
-- **release/v1.2.3** - Release preparation branches (triggers automated Docker build)
+All branches must follow our standardized naming convention. See [Branch Naming Convention](./branch-naming.md) for detailed guidelines on branch types, naming rules, and examples.
 
 ## Branch Workflow
 
@@ -30,19 +16,9 @@ All branches must follow our standardized naming convention that includes the ti
 - **staging** - Protected staging branch for pre-production validation
 
 ### Working with Feature Branches
-1. Create a new branch from `main` using the appropriate prefix
-2. Include the JIRA/ticket number (EQ-XXX) in the branch name
-3. Add a brief, descriptive suffix after the ticket number
-4. Keep branch names lowercase, use hyphens for spaces
-
-### Example Branch Names
-```bash
-git checkout -b feature/EQ-1234-user-authentication
-git checkout -b fix/EQ-5678-login-validation
-git checkout -b hotfix/EQ-9012-critical-payment-bug
-git checkout -b security/EQ-3456-xss-vulnerability
-git checkout -b release/v1.2.3
-```
+1. Create a new branch using the appropriate prefix (see [Branch Naming Convention](./branch-naming.md))
+2. Follow the standardized naming format with ticket numbers
+3. Keep branches short-lived and focused on single tickets
 
 ## Deployment Strategy
 

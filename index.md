@@ -14,7 +14,8 @@ Welcome to the Equevu Pulsebook documentation. This guide serves as a comprehens
 - [Pull Requests (PR)](./PR.md) - Guidelines for creating and managing pull requests
 - [Code Review](./code-review.md) - Best practices for conducting thorough code reviews
 - [Sprint Cycle](./sprint-cycle.md) - Our sprint planning and execution process
-- [Branching & Deployment](./branching-deployment.md) - Branch naming conventions and deployment strategy
+- [Branch Naming Convention](./branch-naming.md) - Standardized branch naming rules and examples
+- [Deployment Strategy](./branching-deployment.md) - Release process and deployment pipeline
 
 ### Coding Standards
 - [General Coding Standards](./coding_standards.md) - Language-agnostic coding conventions and best practices
