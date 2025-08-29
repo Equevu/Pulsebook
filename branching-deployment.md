@@ -220,7 +220,6 @@ If issues are discovered after deployment:
    - Navigate to GitHub Actions deployment history
    - Find the previous successful production deployment
    - Click "Re-run all jobs" to redeploy the previous version
-   - Optionally create a rollback tag for tracking: `git tag v1.2.3-rollback`
 
 ## Security Considerations
 
