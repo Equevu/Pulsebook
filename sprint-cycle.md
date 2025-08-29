@@ -134,6 +134,7 @@ Every second Friday, 1:00 PM - 4:00 PM (after Sprint Retrospective)
 
 #### Participants
 - Business Analyst
+- Lead Engineer
 - Development Team
 - QA Team
 - CEO (optional)
@@ -307,6 +308,7 @@ Monday morning of Week 1 (10:00 AM, 30 minutes)
 
 #### Participants
 - Business Analyst
+- Lead Engineer
 - Development Team
 - QA Team
 - CEO (optional)
@@ -456,6 +458,8 @@ We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 - Coordinates with BA on technical feasibility
 - Ensures technical debt is managed appropriately
 - Makes final technical decisions when consensus cannot be reached
+- Facilitates sprint ceremonies
+- Tracks sprint metrics
 
 ### Business Analyst (BA)
 - Maintains product backlog
@@ -465,8 +469,6 @@ We use Fibonacci numbers: 1, 2, 3, 5, 8, 13, 21
 - Bridges gap between stakeholders and development
 - Prioritizes work with CEO and Operations Manager
 - Validates completed stories meet requirements
-- Facilitates sprint ceremonies
-- Tracks sprint metrics
 - Removes blockers when possible
 
 ### Development Team
