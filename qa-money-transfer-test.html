@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Transfer - QA Test Environment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .transfer-type-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            background: #f5f5f5;
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .transfer-type-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .transfer-type-btn.active {
+            background: white;
+            color: #667eea;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .amount-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .amount-group input {
+            flex: 1;
+        }
+
+        .amount-group select {
+            width: 100px;
+        }
+
+        .date-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 8px;
+        }
+
+        .date-options label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .date-options input[type="radio"] {
+            width: auto;
+            margin-right: 6px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            resize: vertical;
+            min-height: 80px;
+            font-family: inherit;
+        }
+
+        .confirm-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .confirm-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .confirm-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: none;
+            animation: slideIn 0.3s;
+        }
+
+        .toast.error {
+            background: #e74c3c;
+        }
+
+        .toast.success {
+            background: #27ae60;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .balance-info {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .qa-hint {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Money Transfer</h1>
+            <p>Send money securely to any account</p>
+        </div>
+
+        <div class="balance-info">
+            Available Balance: $5,420.50
+        </div>
+
+        <div class="transfer-type-toggle">
+            <button class="transfer-type-btn active" onclick="setTransferType('internal')">Internal Transfer</button>
+            <button class="transfer-type-btn" onclick="setTransferType('external')">External Transfer</button>
+        </div>
+
+        <form id="transferForm">
+            <div class="form-group">
+                <label for="fromAccount">From Account</label>
+                <select id="fromAccount" required>
+                    <option value="">Select account</option>
+                    <option value="checking">Checking - ****1234 ($5,420.50)</option>
+                    <option value="savings">Savings - ****5678 ($12,350.00)</option>
+                    <option value="business">Business - ****9012 ($45,678.90)</option>
+                </select>
+                <span class="error-message" id="fromAccountError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="toAccount">To Account</label>
+                <select id="toAccountInternal" required>
+                    <option value="">Select account</option>
+                    <option value="checking">John Doe - Checking ****4321</option>
+                    <option value="savings">Jane Smith - Savings ****8765</option>
+                    <option value="credit">Credit Card - ****2109</option>
+                </select>
+                <input type="text" id="toAccountExternal" placeholder="Enter IBAN (e.g., GB82WEST12345698765432)" style="display:none;">
+                <span class="error-message" id="toAccountError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <div class="amount-group">
+                    <input type="text" id="amount" placeholder="0.00" required>
+                    <select id="currency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                </div>
+                <span class="error-message" id="amountError"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Transfer Date</label>
+                <div class="date-options">
+                    <label>
+                        <input type="radio" name="dateOption" value="today" checked onchange="toggleDateField()">
+                        Today
+                    </label>
+                    <label>
+                        <input type="radio" name="dateOption" value="future" onchange="toggleDateField()">
+                        Schedule for later
+                    </label>
+                </div>
+                <input type="date" id="transferDate" style="display:none; margin-top:10px;">
+                <span class="error-message" id="dateError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description (Optional)</label>
+                <textarea id="description" placeholder="Enter transfer description..."></textarea>
+            </div>
+
+            <button type="submit" class="confirm-btn" id="confirmBtn">Confirm Transfer</button>
+        </form>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <div class="qa-hint">QA Test Environment v1.0</div>
+
+    <script>
+        let transferType = 'internal';
+
+        function setTransferType(type) {
+            transferType = type;
+            document.querySelectorAll('.transfer-type-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            if (type === 'internal') {
+                document.getElementById('toAccountInternal').style.display = 'block';
+                document.getElementById('toAccountInternal').required = true;
+                document.getElementById('toAccountExternal').style.display = 'none';
+                document.getElementById('toAccountExternal').required = false;
+            } else {
+                document.getElementById('toAccountInternal').style.display = 'none';
+                document.getElementById('toAccountInternal').required = false;
+                document.getElementById('toAccountExternal').style.display = 'block';
+                document.getElementById('toAccountExternal').required = true;
+            }
+        }
+
+        function toggleDateField() {
+            const dateField = document.getElementById('transferDate');
+            const selectedOption = document.querySelector('input[name="dateOption"]:checked').value;
+            
+            if (selectedOption === 'future') {
+                dateField.style.display = 'block';
+                dateField.required = true;
+                // Set min date to tomorrow
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                dateField.min = tomorrow.toISOString().split('T')[0];
+            } else {
+                dateField.style.display = 'none';
+                dateField.required = false;
+            }
+        }
+
+        function showToast(message, type = 'error') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast ' + type;
+            toast.style.display = 'block';
+            
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+
+        function showError(fieldId, message) {
+            const errorElement = document.getElementById(fieldId + 'Error');
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+        }
+
+        function clearErrors() {
+            document.querySelectorAll('.error-message').forEach(err => {
+                err.style.display = 'none';
+            });
+        }
+
+        // BUG 1: Amount field accepts negative values
+        function validateAmount() {
+            const amountField = document.getElementById('amount');
+            const amount = amountField.value;
+            
+            // Intentionally flawed: doesn't check for negative values
+            if (amount === '') {
+                showError('amount', 'Amount is required');
+                return false;
+            }
+            
+            // BUG: Allows non-numeric input except for basic letters
+            if (/[a-zA-Z]/.test(amount)) {
+                showError('amount', 'Please enter a valid amount');
+                return false;
+            }
+            
+            return true;
+        }
+
+        // BUG 2: Form validation is inconsistent
+        document.getElementById('transferForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            clearErrors();
+            
+            let isValid = true;
+            
+            // Check from account
+            const fromAccount = document.getElementById('fromAccount').value;
+            if (!fromAccount) {
+                // BUG 3: Sometimes shows red error, sometimes shows toast
+                if (Math.random() > 0.5) {
+                    showError('fromAccount', 'Please select an account');
+                } else {
+                    showToast('Please select a source account');
+                }
+                isValid = false;
+            }
+            
+            // Check to account
+            const toField = transferType === 'internal' ? 'toAccountInternal' : 'toAccountExternal';
+            const toAccount = document.getElementById(toField).value;
+            
+            // BUG 4: Button remains enabled even with empty required fields
+            // This check happens but doesn't disable the button properly
+            
+            if (!toAccount && Math.random() > 0.3) { // Randomly miss validation 30% of the time
+                showError('toAccount', 'Please select or enter destination account');
+                isValid = false;
+            }
+            
+            // Validate amount
+            if (!validateAmount()) {
+                isValid = false;
+            }
+            
+            // Check date for holidays (BUG 5: Doesn't properly check holidays)
+            const dateOption = document.querySelector('input[name="dateOption"]:checked').value;
+            if (dateOption === 'future') {
+                const selectedDate = new Date(document.getElementById('transferDate').value);
+                const day = selectedDate.getDay();
+                
+                // Should check for holidays but only checks weekends
+                if (day === 0 || day === 6) {
+                    showError('date', 'Transfers cannot be scheduled on weekends');
+                    isValid = false;
+                }
+                // Missing holiday check - Dec 25, Jan 1, etc.
+            }
+            
+            if (isValid || Math.random() < 0.1) { // 10% chance to proceed even if invalid
+                const currency = document.getElementById('currency').value;
+                const amount = document.getElementById('amount').value;
+                
+                // BUG 6: Currency mismatch - shows USD but might process as EUR
+                const displayCurrency = currency;
+                const processCurrency = Math.random() > 0.8 ? 'EUR' : currency; // 20% chance of mismatch
+                
+                showToast(`Transfer of ${displayCurrency} ${amount} initiated successfully!`, 'success');
+                
+                // Log for QA debugging
+                console.log('Transfer processed:', {
+                    displayed: displayCurrency,
+                    processed: processCurrency,
+                    amount: amount
+                });
+                
+                // Reset form after 2 seconds
+                setTimeout(() => {
+                    this.reset();
+                }, 2000);
+            }
+        });
+
+        // BUG 7: Enable/disable button logic is flawed
+        document.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('input', function() {
+                const btn = document.getElementById('confirmBtn');
+                const fromAccount = document.getElementById('fromAccount').value;
+                const toField = transferType === 'internal' ? 'toAccountInternal' : 'toAccountExternal';
+                const toAccount = document.getElementById(toField).value;
+                const amount = document.getElementById('amount').value;
+                
+                // Button stays enabled even when fields are empty (intentional bug)
+                // Should be: btn.disabled = !fromAccount || !toAccount || !amount;
+                btn.disabled = false; // Always enabled
+            });
+        });
+
+        // Initialize
+        toggleDateField();
+    </script>
+</body>
+</html>
