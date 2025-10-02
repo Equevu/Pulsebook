@@ -242,8 +242,8 @@ permalink: /qa-money-transfer-test/
         </div>
 
         <div class="transfer-type-toggle">
-            <button class="transfer-type-btn active" onclick="setTransferType('internal')">Internal Transfer</button>
-            <button class="transfer-type-btn" onclick="setTransferType('external')">External Transfer</button>
+            <button class="transfer-type-btn active" onclick="setTransferType('internal', event)">Internal Transfer</button>
+            <button class="transfer-type-btn" onclick="setTransferType('external', event)">External Transfer</button>
         </div>
 
         <form id="transferForm">
@@ -314,12 +314,12 @@ permalink: /qa-money-transfer-test/
     <script>
         let transferType = 'internal';
 
-        function setTransferType(type) {
+        function setTransferType(type, evt) {
             transferType = type;
             document.querySelectorAll('.transfer-type-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            evt.target.classList.add('active');
 
             if (type === 'internal') {
                 document.getElementById('toAccountInternal').style.display = 'block';
