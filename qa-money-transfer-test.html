@@ -393,6 +393,28 @@ permalink: /qa-money-transfer-test/
                 return false;
             }
             
+            // BUG 8: Rounding error - uses floating point math incorrectly
+            if (amount.includes('.')) {
+                const parts = amount.split('.');
+                if (parts[1] && parts[1].length > 2) {
+                    // Intentionally bad rounding that causes precision errors
+                    const rounded = Math.round(parseFloat(amount) * 100) / 100;
+                    const jsRounded = parseFloat(amount).toFixed(2);
+                    
+                    // Sometimes these don't match due to floating point issues
+                    if (rounded !== parseFloat(jsRounded)) {
+                        console.log('Rounding mismatch detected:', {
+                            original: amount,
+                            method1: rounded,
+                            method2: jsRounded
+                        });
+                    }
+                    
+                    // Silently changes the amount without updating the field
+                    amountField.dataset.processedAmount = rounded;
+                }
+            }
+            
             return true;
         }
 
@@ -448,19 +470,30 @@ permalink: /qa-money-transfer-test/
             
             if (isValid || Math.random() < 0.1) { // 10% chance to proceed even if invalid
                 const currency = document.getElementById('currency').value;
-                const amount = document.getElementById('amount').value;
+                const amountField = document.getElementById('amount');
+                const amount = amountField.value;
                 
                 // BUG 6: Currency mismatch - shows USD but might process as EUR
                 const displayCurrency = currency;
                 const processCurrency = Math.random() > 0.8 ? 'EUR' : currency; // 20% chance of mismatch
                 
-                showToast(`Transfer of ${displayCurrency} ${amount} initiated successfully!`, 'success');
+                // BUG 8 continued: Use the incorrectly rounded amount for processing
+                const processedAmount = amountField.dataset.processedAmount || amount;
+                const displayAmount = amount; // Show original amount to user
                 
-                // Log for QA debugging
+                // Additional rounding error: multiply by 0.01 and divide by 0.01 introduces more errors
+                const finalAmount = Math.round(processedAmount * 100.0) * 0.01;
+                
+                showToast(`Transfer of ${displayCurrency} ${displayAmount} initiated successfully!`, 'success');
+                
+                // Log for QA debugging - shows the rounding discrepancies
                 console.log('Transfer processed:', {
                     displayed: displayCurrency,
                     processed: processCurrency,
-                    amount: amount
+                    displayedAmount: displayAmount,
+                    processedAmount: processedAmount,
+                    finalAmount: finalAmount,
+                    difference: parseFloat(displayAmount) - finalAmount
                 });
                 
                 // Reset form after 2 seconds
